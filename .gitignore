@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+i.venv
+
+.ipynb_checkpoints/
+.python-version
+CLAUDE.md
+README.md
+output/
+
