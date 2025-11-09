@@ -7,11 +7,10 @@ wheels/
 *.egg-info
 
 # Virtual environments
-i.venv
+.venv
 
 .ipynb_checkpoints/
 .python-version
 CLAUDE.md
-README.md
 output/
 

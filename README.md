@@ -1,0 +1,1 @@
+See <solarpanel/README.md>
