@@ -46,7 +46,7 @@ else:
 sys.path.insert(0, str(data_dir))
 from util import load_fetch_collection, train_with_label_subset, visualize_embeddings
 
-gt = GeoTessera()
+gt = GeoTessera(embeddings_dir="embeddings")
 
 # load bounding box from bbox.json
 bbox_file = data_dir / 'bbox.json'
@@ -58,8 +58,8 @@ if not bbox_file.exists():
 bounding_box = json.load(open(bbox_file))['bbox']
 
 # load training and test sets
-train_positive = [(a, True) for a in load_fetch_collection(str(data_dir / 'train_clean_positive.geojson'))]
-train_negative = [(a, False) for a in load_fetch_collection(str(data_dir / 'train_clean_negative.geojson'))]
+train_positive = [(a, True) for a in load_fetch_collection(str(data_dir / 'train_positive.geojson'))]
+train_negative = [(a, False) for a in load_fetch_collection(str(data_dir / 'train_negative.geojson'))]
 test_positive = [(a, True) for a in load_fetch_collection(str(data_dir / 'test_positive.geojson'))]
 test_negative = [(a, False) for a in load_fetch_collection(str(data_dir / 'test_negative.geojson'))]
 
